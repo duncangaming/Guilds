@@ -1,4 +1,4 @@
 name: Guilds
-version: @version@
+version: 1.0
 main: me.duncangaming.guilds.Guilds
 api-version: 1.13
