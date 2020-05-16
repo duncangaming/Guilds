@@ -2,3 +2,6 @@ name: Guilds
 version: 1.0
 main: me.duncangaming.guilds.Guilds
 api-version: 1.13
+commands:
+  randomtp:
+    aliases: [rtp, wild]
