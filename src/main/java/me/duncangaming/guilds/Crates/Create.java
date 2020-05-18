@@ -37,21 +37,29 @@ public class Create implements CommandExecutor, Listener {
                 if (args.length != 0) {
                     if (args[0].equalsIgnoreCase("create")) {
                         if (sender.hasPermission("crates.admin")) {
-                            openInv((Player) sender);
-                            config.setConfig(args[1], null);
-                            addRewards.put(((Player) sender).getPlayer().getUniqueId(), args[1]);
+                        	if (args[1].length() != 0) {
+                        		 openInv((Player) sender);
+                                 addRewards.put(((Player) sender).getPlayer().getUniqueId(), args[1]);
+                        		} else {
+                        			
+                        			sender.sendMessage(ChatColor.RED + "Please name your crate");
+                        			
+                        		}
+                           
                             } else {
                             sender.sendMessage(ChatColor.RED + "You don't have permission to run this command");
+
                             }
                         }
                     } else {
                     sender.sendMessage("");
-                    return true;
+
                     }
 
                 } else {
                 sender.sendMessage(ChatColor.RED + "You must be a player to run this command");
             }
+            return true;
             }
 
         return false;
